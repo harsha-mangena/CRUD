@@ -1,0 +1,13 @@
+server : 
+  port : 8888
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path : /Database
+  datasource:
+    url: jdbc:h2:mem:EmployeeDatabase
+    username: admin
+    password: admin
+    driverClassName: org.h2.Driver
