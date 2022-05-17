@@ -2,12 +2,16 @@ server :
   port : 8888
 
 spring:
-  h2:
-    console:
-      enabled: true
-      path : /Database
   datasource:
-    url: jdbc:h2:mem:EmployeeDatabase
-    username: admin
-    password: admin
-    driverClassName: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/EmployeeManagement
+    username: root
+    password: yoloman88
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      naming:
+        physical-strategy : org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl:
+        auto : update
+

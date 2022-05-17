@@ -12,24 +12,24 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "`Employee`")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Employee 
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Employee_Id", nullable = false, unique = true)
     private Integer employeeId;
 
     @Column(name = "Employee_Name", nullable = false)
     private String employeeName;
 
-    @Column(name = "Employee_Email", nullable = false, unique = true)
+    @Column(name = "Employee_Email", unique = true)
     private String employeeEmail;
 
-    @Column(name = "Employee_PhoneNumber", nullable = false, unique = true)
+    @Column(name = "Employee_PhoneNumber", unique = true)
     private String employeePhoneNumber;
     
     @Column(name = "Employee_Level", nullable = false)
